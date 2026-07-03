@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Services | Delta Engineering Works",
+  title: "Services | Delta Control Projects",
   description:
-    "Delta Engineering Works' service commitments: replacement warranty, after-sale support, global distributor network, and application guidance for welding & cutting equipment.",
+    "Delta Control Projects' service commitments: replacement warranty, after-sale support, global distributor network, and application guidance for welding & cutting equipment.",
 };
 
 const services = [
@@ -38,7 +38,7 @@ export default function ServicesPage() {
     <div>
       <section className="bg-navy-900 text-white py-20">
         <div className="container-page">
-          <span className="font-mono text-xs text-spark-400 uppercase tracking-widest">
+          <span className="font-mono text-xs text-accent-400 uppercase tracking-widest">
             Services
           </span>
           <h1 className="font-display text-4xl md:text-5xl mt-3 max-w-2xl leading-tight">
@@ -56,7 +56,7 @@ export default function ServicesPage() {
         <div className="container-page grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <div key={s.title} className="bg-white border border-navy-900/10 rounded-sm p-6">
-              <span className="font-mono text-xs text-spark-600">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-mono text-xs text-accent-600">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="font-display text-lg text-navy-900 mt-2 mb-3 uppercase tracking-wide">
                 {s.title}
               </h3>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-spark-500">
+      <section className="py-16 bg-accent-500">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-6 text-white">
           <div>
             <h2 className="font-display text-2xl md:text-3xl uppercase">
@@ -124,4 +124,4 @@ export default function ServicesPage() {
       </section>
     </div>
   );
-                }
+                  }
