@@ -2,9 +2,9 @@ import ContactForm from "@/components/ContactForm";
 import { company } from "@/data/company";
 
 export const metadata = {
-  title: "Contact | Delta Engineering Works",
+  title: "Contact | Delta Control Projects",
   description:
-    "Contact Delta Engineering Works — factory in Pune, India, with regional offices in Muscat, Sohar, Bahrain, and Dammam, Saudi Arabia.",
+    "Contact Delta Control Projects — factory in Pune, India, with regional offices in Muscat, Sohar, Bahrain, and Dammam, Saudi Arabia.",
 };
 
 export default function ContactPage() {
@@ -12,7 +12,7 @@ export default function ContactPage() {
     <div>
       <section className="bg-navy-900 text-white py-20">
         <div className="container-page">
-          <span className="font-mono text-xs text-spark-400 uppercase tracking-widest">
+          <span className="font-mono text-xs text-accent-400 uppercase tracking-widest">
             Contact
           </span>
           <h1 className="font-display text-4xl md:text-5xl mt-3 max-w-2xl leading-tight">
@@ -32,13 +32,13 @@ export default function ContactPage() {
             <ContactForm />
 
             <div className="mt-8 bg-navy-900 text-white rounded-sm p-6">
-              <h3 className="font-display text-lg uppercase tracking-wide mb-3 text-spark-400">
+              <h3 className="font-display text-lg uppercase tracking-wide mb-3 text-accent-400">
                 Direct Contact
               </h3>
               <ul className="space-y-2 text-sm text-white/80">
                 {company.emails.map((e) => (
                   <li key={e}>
-                    <a href={`mailto:${e}`} className="hover:text-spark-400 break-all">
+                    <a href={`mailto:${e}`} className="hover:text-accent-400 break-all">
                       {e}
                     </a>
                   </li>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                       href={`https://${w}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-spark-400"
+                      className="hover:text-accent-400"
                     >
                       {w}
                     </a>
@@ -67,12 +67,12 @@ export default function ContactPage() {
                   key={office.name}
                   className={`bg-white rounded-sm p-5 border ${
                     office.primary
-                      ? "border-spark-500/60 ring-1 ring-spark-500/30"
+                      ? "border-accent-500/60 ring-1 ring-accent-500/30"
                       : "border-navy-900/10"
                   }`}
                 >
                   {office.primary && (
-                    <span className="inline-block bg-spark-500 text-white text-[10px] uppercase tracking-wider px-2 py-1 rounded-sm mb-3">
+                    <span className="inline-block bg-accent-500 text-white text-[10px] uppercase tracking-wider px-2 py-1 rounded-sm mb-3">
                       Head Office
                     </span>
                   )}
@@ -91,7 +91,7 @@ export default function ContactPage() {
                       <li key={p}>
                         <a
                           href={`tel:${p.replace(/\s+/g, "")}`}
-                          className="text-sm font-mono text-navy-700 hover:text-spark-600"
+                          className="text-sm font-mono text-navy-700 hover:text-accent-600"
                         >
                           {p}
                         </a>
