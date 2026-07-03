@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="container-page py-32 text-center">
-      <span className="font-mono text-spark-600 text-sm uppercase tracking-widest">
+      <span className="font-mono text-accent-600 text-sm uppercase tracking-widest">
         404
       </span>
       <h1 className="font-display text-4xl text-navy-900 mt-3 mb-4">
@@ -14,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/products"
-        className="bg-spark-500 hover:bg-spark-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
+        className="bg-accent-500 hover:bg-accent-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
       >
         View Products
       </Link>
