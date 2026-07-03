@@ -2,6 +2,7 @@ import { Oswald, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { logoDataUri } from "@/data/logo";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -24,20 +25,20 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata = {
-  title: "Delta Engineering Works | Solutions for Welding & Cutting",
+  title: "Delta Control Projects | Solutions for Welding & Cutting",
   description:
-    "Delta Engineering Works manufactures CNC plasma & laser cutting systems, ARC, TIG & MIG welding machines, plasma cutters, welding generators, and torches. ISO 9001:2000 certified, Pune, India.",
+    "Delta Control Projects manufactures CNC plasma & laser cutting systems, ARC, TIG & MIG welding machines, plasma cutters, welding generators, and torches. ISO 9001:2000 certified, Pune, India.",
   keywords: [
     "welding machines",
     "plasma cutting machine",
     "CNC plasma cutting",
     "TIG welding machine",
     "MIG welding machine",
-    "Delta Engineering Works",
+    "Delta Control Projects",
     "Pune welding equipment manufacturer",
   ],
   icons: {
-    icon: "/favicon.png",
+    icon: logoDataUri,
   },
 };
 
