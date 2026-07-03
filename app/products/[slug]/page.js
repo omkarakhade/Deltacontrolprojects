@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const product = getProductBySlug(slug);
   if (!product) return {};
   return {
-    title: `${product.name} | Delta Engineering Works`,
+    title: `${product.name} | Delta Control Projects`,
     description: product.description,
   };
 }
@@ -33,13 +33,13 @@ export default async function ProductDetailPage({ params }) {
   return (
     <div className="container-page py-14">
       <nav className="text-xs text-ink/50 mb-8 flex items-center gap-2 flex-wrap">
-        <Link href="/" className="hover:text-spark-600">Home</Link>
+        <Link href="/" className="hover:text-accent-600">Home</Link>
         <span>/</span>
-        <Link href="/products" className="hover:text-spark-600">Products</Link>
+        <Link href="/products" className="hover:text-accent-600">Products</Link>
         {category && (
           <>
             <span>/</span>
-            <Link href={`/products?category=${category.slug}`} className="hover:text-spark-600">
+            <Link href={`/products?category=${category.slug}`} className="hover:text-accent-600">
               {category.name}
             </Link>
           </>
@@ -75,14 +75,14 @@ export default async function ProductDetailPage({ params }) {
             </span>
           </div>
 
-          <span className="font-mono text-xs text-spark-600 tracking-wide">{product.model}</span>
+          <span className="font-mono text-xs text-accent-600 tracking-wide">{product.model}</span>
           <h1 className="font-display text-3xl md:text-4xl text-navy-900 mt-1 mb-4 leading-tight">
             {product.name}
           </h1>
           <p className="text-ink/70 leading-relaxed mb-6">{product.description}</p>
 
           {product.idealFor && (
-            <p className="text-sm text-navy-800 bg-steel-100 border-l-4 border-spark-500 px-4 py-3 rounded-sm mb-6">
+            <p className="text-sm text-navy-800 bg-steel-100 border-l-4 border-accent-500 px-4 py-3 rounded-sm mb-6">
               <span className="font-semibold">Ideal for: </span>
               {product.idealFor}
             </p>
@@ -97,13 +97,13 @@ export default async function ProductDetailPage({ params }) {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="bg-spark-500 hover:bg-spark-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
+              className="bg-accent-500 hover:bg-accent-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
             >
               Request A Quote
             </Link>
             <Link
               href="/products"
-              className="border border-navy-900/20 hover:border-spark-500/60 transition-colors text-navy-900 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
+              className="border border-navy-900/20 hover:border-accent-500/60 transition-colors text-navy-900 font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
             >
               Back To Catalogue
             </Link>
@@ -119,7 +119,7 @@ export default async function ProductDetailPage({ params }) {
             <ul className="space-y-3">
               {product.features.map((f) => (
                 <li key={f} className="flex gap-3 text-sm text-ink/75 leading-relaxed">
-                  <span className="text-spark-500 mt-0.5">●</span>
+                  <span className="text-accent-500 mt-0.5">●</span>
                   <span>{f}</span>
                 </li>
               ))}
