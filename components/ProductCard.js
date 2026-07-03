@@ -7,7 +7,7 @@ export default function ProductCard({ product }) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group relative flex flex-col bg-white border border-navy-900/10 rounded-sm overflow-hidden hover:border-spark-500/60 hover:shadow-lg transition-all duration-200"
+      className="group relative flex flex-col bg-white border border-navy-900/10 rounded-sm overflow-hidden hover:border-accent-500/60 hover:shadow-lg transition-all duration-200"
     >
       <div className="relative bg-steel-100 aspect-[4/3] flex items-center justify-center p-4 overflow-hidden">
         <Image
@@ -24,10 +24,10 @@ export default function ProductCard({ product }) {
         )}
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <span className="font-mono text-[11px] text-spark-600 tracking-wide mb-1">
+        <span className="font-mono text-[11px] text-accent-600 tracking-wide mb-1">
           {product.model}
         </span>
-        <h3 className="font-display text-lg text-navy-900 leading-tight mb-2 group-hover:text-spark-600 transition-colors">
+        <h3 className="font-display text-lg text-navy-900 leading-tight mb-2 group-hover:text-accent-600 transition-colors">
           {product.name}
         </h3>
         <p className="text-sm text-ink/70 line-clamp-2 mb-4">{product.description}</p>
