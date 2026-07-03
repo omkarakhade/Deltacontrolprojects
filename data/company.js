@@ -1,20 +1,16 @@
 export const company = {
-  name: "Delta Engineering Works",
+  name: "Delta Control Projects",
   tagline: "Solutions for Welding & Cutting",
   founded: "An ISO 9001:2000 Company",
-  emails: [
-    "sales@deltawelds.com",
-    "deltaweng29@rediffmail.com",
-    "deltaeltahkam@gamil.com",
-  ],
-  websites: ["www.deltawelds.com", "www.deltaengineeringworks.com"],
+  emails: ["info@deltacontrolprojects.com"],
+  websites: ["www.deltacontrolprojects.com"],
   presenceNote:
     "We have offices in Saudi Arabia, Bahrain, Oman, UAE, Kuwait, and Qatar.",
   offices: [
     {
       name: "Factory Address (India)",
       lines: [
-        "Delta Engineering Works,",
+        "Delta Control Projects,",
         "C/A-1/1, Block MIDC, Behind IBMR College,",
         "Chinchwad, Pune - 411019, India",
       ],
