@@ -82,7 +82,7 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="bg-spark-500 hover:bg-spark-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
+        className="bg-accent-500 hover:bg-accent-600 transition-colors text-white font-semibold text-sm uppercase tracking-wide px-6 py-3 rounded-sm"
       >
         Send Enquiry
       </button>
