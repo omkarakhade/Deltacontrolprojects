@@ -45,7 +45,7 @@ export default function ProductsClient() {
           className={`px-4 py-2 rounded-sm text-xs uppercase tracking-wide font-semibold transition-colors ${
             activeCategory === "all"
               ? "bg-navy-900 text-white"
-              : "bg-white text-navy-900 border border-navy-900/15 hover:border-spark-500/60"
+              : "bg-white text-navy-900 border border-navy-900/15 hover:border-accent-500/60"
           }`}
         >
           All Categories
@@ -57,7 +57,7 @@ export default function ProductsClient() {
             className={`px-4 py-2 rounded-sm text-xs uppercase tracking-wide font-semibold transition-colors ${
               activeCategory === cat.slug
                 ? "bg-navy-900 text-white"
-                : "bg-white text-navy-900 border border-navy-900/15 hover:border-spark-500/60"
+                : "bg-white text-navy-900 border border-navy-900/15 hover:border-accent-500/60"
             }`}
           >
             {cat.name}
