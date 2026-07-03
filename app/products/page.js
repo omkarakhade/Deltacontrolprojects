@@ -2,16 +2,16 @@ import { Suspense } from "react";
 import ProductsClient from "@/components/ProductsClient";
 
 export const metadata = {
-  title: "Products | Delta Engineering Works",
+  title: "Products | Delta Control Projects",
   description:
-    "Browse Delta Engineering Works' full catalogue: CNC & laser cutting machines, ARC, TIG & MIG welders, plasma cutters, welding generators, and torches.",
+    "Browse Delta Control Projects' full catalogue: CNC & laser cutting machines, ARC, TIG & MIG welders, plasma cutters, welding generators, and torches.",
 };
 
 export default function ProductsPage() {
   return (
     <div className="container-page py-16">
       <div className="mb-10 max-w-2xl">
-        <span className="font-mono text-xs text-spark-600 uppercase tracking-widest">
+        <span className="font-mono text-xs text-accent-600 uppercase tracking-widest">
           Full Catalogue
         </span>
         <h1 className="font-display text-3xl md:text-4xl text-navy-900 mt-2">
