@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { logoDataUri } from "@/data/logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,11 +23,11 @@ export default function Header() {
       <div className="container-page flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <Image
-            src="/logo.png"
-            alt="Delta Engineering Works logo"
+            src={logoDataUri}
+            alt="Delta Control Projects logo"
             width={44}
-            height={52}
-            className="h-11 w-auto"
+            height={38}
+            className="h-9 w-auto"
             priority
           />
           <span className="flex flex-col leading-none">
@@ -34,7 +35,7 @@ export default function Header() {
               Delta
             </span>
             <span className="text-[10px] tracking-[0.25em] text-steel-400 uppercase">
-              Engineering Works
+              Control Projects
             </span>
           </span>
         </Link>
@@ -51,7 +52,7 @@ export default function Header() {
                 href={link.href}
                 className={`font-body text-sm uppercase tracking-wide transition-colors ${
                   active
-                    ? "text-spark-500"
+                    ? "text-accent-500"
                     : "text-white/80 hover:text-white"
                 }`}
               >
@@ -61,7 +62,7 @@ export default function Header() {
           })}
           <a
             href="tel:+919822190996"
-            className="ml-2 rounded-sm bg-spark-500 hover:bg-spark-600 transition-colors text-white text-sm font-semibold px-4 py-2 uppercase tracking-wide"
+            className="ml-2 rounded-sm bg-accent-500 hover:bg-accent-600 transition-colors text-white text-sm font-semibold px-4 py-2 uppercase tracking-wide"
           >
             Call Now
           </a>
@@ -93,7 +94,7 @@ export default function Header() {
           ))}
           <a
             href="tel:+919822190996"
-            className="rounded-sm bg-spark-500 text-white text-sm font-semibold px-4 py-3 uppercase tracking-wide text-center mt-1"
+            className="rounded-sm bg-accent-500 text-white text-sm font-semibold px-4 py-3 uppercase tracking-wide text-center mt-1"
           >
             Call Now
           </a>
