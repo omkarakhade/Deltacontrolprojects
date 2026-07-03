@@ -7,12 +7,12 @@ html {
 }
 
 body {
-  color: #101828;
+  color: #0B0F19;
   background-color: #F5F8FC;
 }
 
 ::selection {
-  background-color: #FF6A2B;
+  background-color: #2F6FED;
   color: white;
 }
 
@@ -21,7 +21,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #FF6A2B;
+  outline: 2px solid #2F6FED;
   outline-offset: 2px;
 }
 
@@ -52,5 +52,5 @@ textarea:focus-visible {
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, #ffb98a, #FF6A2B 60%, #b8420f 100%);
+  background: radial-gradient(circle at 35% 35%, #9dc0ff, #2F6FED 60%, #0B3FA0 100%);
 }
