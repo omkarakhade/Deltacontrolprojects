@@ -21,12 +21,13 @@ module.exports = {
           100: "#E7EFFB",
           50: "#F5F8FC",
         },
-        spark: {
-          600: "#E85A1B",
-          500: "#FF6A2B",
-          400: "#FF8A52",
+        accent: {
+          700: "#0B3FA0",
+          600: "#1450C4",
+          500: "#2F6FED",
+          400: "#67A3FF",
         },
-        ink: "#101828",
+        ink: "#0B0F19",
       },
       fontFamily: {
         display: ["var(--font-oswald)", "sans-serif"],
@@ -35,7 +36,7 @@ module.exports = {
       },
       backgroundImage: {
         "diagonal-grid":
-          "linear-gradient(135deg, rgba(255,106,43,0.06) 1px, transparent 1px), linear-gradient(45deg, rgba(10,27,78,0.05) 1px, transparent 1px)",
+          "linear-gradient(135deg, rgba(47,111,237,0.08) 1px, transparent 1px), linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
       },
     },
   },
