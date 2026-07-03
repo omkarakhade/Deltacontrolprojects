@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { company } from "@/data/company";
 
 export const metadata = {
-  title: "About | Delta Engineering Works",
+  title: "About | Delta Control Projects",
   description:
-    "Delta Engineering Works is an ISO 9001:2000 certified manufacturer of welding and cutting equipment, headquartered in Pune, India, with a global distribution network.",
+    "Delta Control Projects is an ISO 9001:2000 certified manufacturer of welding and cutting equipment, headquartered in Pune, India, with a global distribution network.",
 };
 
 export default function AboutPage() {
@@ -14,7 +13,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-navy-900 text-white py-20">
         <div className="container-page">
-          <span className="font-mono text-xs text-spark-400 uppercase tracking-widest">
+          <span className="font-mono text-xs text-accent-400 uppercase tracking-widest">
             About Delta
           </span>
           <h1 className="font-display text-4xl md:text-5xl mt-3 max-w-3xl leading-tight">
@@ -107,20 +106,26 @@ export default function AboutPage() {
             Quality &amp; Certification
           </h2>
           <p className="text-ink/60 mb-10">Committed to excellence, backed by:</p>
-          <div className="max-w-3xl mx-auto rounded-sm overflow-hidden border border-navy-900/10">
-            <Image
-              src="/certs/certifications.jpg"
-              alt="Delta Engineering Works certifications: SABIC, ISO 9001:2000, SASO, Indian Achievers' Forum, Aramco, IAF"
-              width={1000}
-              height={1180}
-              className="w-full h-auto"
-            />
+          <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {company.certifications.map((cert) => (
+              <div
+                key={cert}
+                className="flex flex-col items-center justify-center gap-3 bg-steel-50 border border-navy-900/10 rounded-sm px-4 py-8 hover:border-accent-500/50 hover:shadow-md transition-all"
+              >
+                <span className="w-11 h-11 rounded-full bg-navy-900 text-white flex items-center justify-center font-display text-sm">
+                  ✓
+                </span>
+                <span className="text-sm font-semibold text-navy-900 leading-snug">
+                  {cert}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-spark-500">
+      <section className="py-16 bg-accent-500">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-6 text-white">
           <div>
             <h2 className="font-display text-2xl md:text-3xl uppercase">
