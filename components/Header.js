@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { logoDataUri } from "@/data/logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -23,7 +22,7 @@ export default function Header() {
       <div className="container-page flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <Image
-            src={logoDataUri}
+            src="/logo.png"
             alt="Delta Control Projects logo"
             width={44}
             height={38}
