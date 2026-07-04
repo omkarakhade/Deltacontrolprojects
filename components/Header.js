@@ -25,7 +25,7 @@ export default function Header() {
             src="/logo.png"
             alt="Delta Control Projects logo"
             width={44}
-            height={38}
+            height={44}
             className="h-9 w-auto"
             priority
           />
