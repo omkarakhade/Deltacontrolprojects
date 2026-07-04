@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { company } from "@/data/company";
+import { certificationsImage } from "@/data/certificationsImage";
 
 export const metadata = {
   title: "About | Delta Control Projects",
@@ -106,6 +108,17 @@ export default function AboutPage() {
             Quality &amp; Certification
           </h2>
           <p className="text-ink/60 mb-10">Committed to excellence, backed by:</p>
+
+          <div className="max-w-md mx-auto mb-12">
+            <Image
+              src={certificationsImage}
+              alt="Delta Control Projects certifications"
+              width={700}
+              height={824}
+              className="w-full h-auto rounded-sm border border-navy-900/10 shadow-sm"
+            />
+          </div>
+
           <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4">
             {company.certifications.map((cert) => (
               <div
