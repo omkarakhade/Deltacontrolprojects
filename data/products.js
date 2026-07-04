@@ -1,4 +1,16 @@
 // Product & category data sourced from the Delta Engineering Works brochure.
+import { productImagesPart1 } from "./productImagesPart1";
+import { productImagesPart2 } from "./productImagesPart2";
+
+// Merge all image parts into a single lookup map (keyed by original filename, no extension)
+const imageMap = {
+  ...productImagesPart1,
+  ...productImagesPart2,
+};
+
+// Simple grey placeholder shown until the remaining product photos are added
+const placeholderImage =
+  "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23E2E8F0%22/%3E%3Ctext%20x%3D%22200%22%20y%3D%22155%22%20font-family%3D%22sans-serif%22%20font-size%3D%2218%22%20fill%3D%22%2394A3B8%22%20text-anchor%3D%22middle%22%3EImage%20coming%20soon%3C/text%3E%3C/svg%3E";
 
 export const categories = [
   {
@@ -65,7 +77,7 @@ export const products = [
     category: "cnc",
     make: "Delta",
     type: "Servo-Driven",
-    image: "/products/cnc-plasma.jpg",
+    image: imageMap["cnc-plasma"] || placeholderImage,
     description:
       "An automated CNC plasma cutting platform built on Panasonic servo motors and precision rail drives, designed for accurate, high-volume metal profiling with low operation and maintenance costs.",
     features: [
@@ -89,7 +101,7 @@ export const products = [
     category: "laser",
     make: "Delta",
     type: "Fiber Laser, CNC",
-    image: "/products/laser-cutting.jpg",
+    image: imageMap["laser-cutting"] || placeholderImage,
     description:
       "A non-contact, high-precision cutting system compatible with stainless steel, carbon steel, and aluminum, built for high-tolerance parts, artistic metalwork, prototyping, and large-scale manufacturing.",
     features: [
@@ -116,7 +128,7 @@ export const products = [
     category: "arc",
     make: "Delta",
     type: "IGBT Inverter",
-    image: "/products/arc-hr250.jpg",
+    image: imageMap["arc-hr250"] || placeholderImage,
     description:
       "A light, IGBT-controlled ARC welder built for stability and minimum breakdown — easy to carry to tall structures for maintenance and light fabrication work.",
     features: [
@@ -144,7 +156,7 @@ export const products = [
     category: "arc",
     make: "Delta",
     type: "IGBT Inverter",
-    image: "/products/arc-hr400-500.jpg",
+    image: imageMap["arc-hr400-500"] || placeholderImage,
     description:
       "A heavy-duty ARC inverter for industries where welding is done extensively and consistently high quality is required — from petroleum to dairy and chemical plants.",
     features: [
@@ -173,7 +185,7 @@ export const products = [
     category: "tig",
     make: "Delta",
     type: "DC Inverter",
-    image: "/products/tig-200.jpg",
+    image: imageMap["tig-200"] || placeholderImage,
     description:
       "A light, easy-to-carry TIG welder for thin-plate work, with high-frequency arc initiation for a clean, stable arc.",
     features: [
@@ -204,7 +216,7 @@ export const products = [
     category: "tig",
     make: "Delta",
     type: "Inverter",
-    image: "/products/tig-400-mma.jpg",
+    image: imageMap["tig-400-mma"] || placeholderImage,
     description:
       "Built for continuous stainless-steel welding, including joints that need to clear radiography inspection — lighter and more portable than conventional machines.",
     features: [
@@ -232,9 +244,9 @@ export const products = [
     category: "tig",
     make: "Delta",
     type: "AC/DC Inverter",
-    image: "/products/tig-acdc.jpg",
+    image: imageMap["tig-acdc"] || placeholderImage,
     description:
-      "A lower-power-draw AC/DC inverter with stable welding current and overload trip protection — more efficient than conventional AC/DC welding machines.",
+      "A lower-power-draw AC/DC inverter with stable elding current and overload trip protection — more efficient than conventional AC/DC welding machines.",
     features: [
       "Lower power consumption",
       "Light weight, hence easily portable",
@@ -263,7 +275,7 @@ export const products = [
     category: "mig",
     make: "Delta",
     type: "IGBT Inverter",
-    image: "/products/mig-400-500.jpg",
+    image: imageMap["mig-400-500"] || placeholderImage,
     description:
       "An IGBT-controlled MIG welder tuned for continuous operation and heavy fabrication, with current and voltage adjustable by potentiometer for precise, superior welds.",
     features: [
@@ -293,7 +305,7 @@ export const products = [
     category: "plasma",
     make: "Delta",
     type: "IGBT Inverter",
-    image: "/products/plasma-100.jpg",
+    image: imageMap["plasma-100"] || placeholderImage,
     description:
       "A durable, overload-protected plasma cutter running at roughly a third of the operating cost of oxyacetylene cutting, with a clean seam that skips finishing work.",
     features: [
@@ -325,7 +337,7 @@ export const products = [
     category: "plasma",
     make: "Delta",
     type: "Digital Plasma",
-    image: "/products/plasma-160.jpg",
+    image: imageMap["plasma-160"] || placeholderImage,
     description:
       "A step up in cutting capacity from the CUT-100, with the same overload protection and low running-cost profile in a digitally controlled package.",
     features: [
@@ -354,7 +366,7 @@ export const products = [
     category: "plasma",
     make: "Delta",
     type: "Digital Plasma",
-    image: "/products/plasma-260-300.jpg",
+    image: imageMap["plasma-260-300"] || placeholderImage,
     description:
       "A three-phase plasma cutter built for thicker material and higher-volume cutting floors, keeping the same low running-cost advantage over gas cutting.",
     features: [
@@ -383,7 +395,7 @@ export const products = [
     category: "plasma",
     make: "Delta",
     type: "Industrial Grade",
-    image: "/products/plasma-400-500.jpg",
+    image: imageMap["plasma-400-500"] || placeholderImage,
     description:
       "The top of the plasma range — high-frequency, non-contact arc ignition, Class F insulation, and forced-air cooling for demanding industrial cutting floors.",
     features: [
@@ -420,7 +432,7 @@ export const products = [
     category: "generator",
     make: "Delta",
     type: "Engine-Driven, Trolley-Mounted",
-    image: "/products/welding-generator.jpg",
+    image: imageMap["welding-generator"] || placeholderImage,
     description:
       "A high-performance welding machine integrated with a robust generator on a heavy-duty trolley — built for construction sites, pipelines, shipbuilding, and field repair.",
     features: [
@@ -457,7 +469,7 @@ export const products = [
     category: "torch",
     make: "Delta",
     type: "Plasma Cutting Torch",
-    image: "/products/torch-cut100.jpg",
+    image: imageMap["torch-cut100"] || placeholderImage,
     description:
       "An air-cooled, high-frequency ignition plasma torch matched to the Delta Cut-100 range, with a pilot arc for clean starts on painted or rusted material.",
     features: [
@@ -485,7 +497,7 @@ export const products = [
     category: "torch",
     make: "Delta",
     type: "Plasma Cutting Torch",
-    image: "/products/torch-cut120.jpg",
+    image: imageMap["torch-cut120"] || placeholderImage,
     description:
       "A higher-duty-cycle plasma torch for machines that need extra cutting current headroom, sharing the same air-cooled, high-frequency ignition design.",
     features: [
@@ -513,7 +525,7 @@ export const products = [
     category: "torch",
     make: "Delta",
     type: "TIG Welding Torch",
-    image: "/products/torch-tig105.jpg",
+    image: imageMap["torch-tig105"] || placeholderImage,
     description:
       "A complete TIG torch package with a full range of collets, nozzles, gas lenses, and cable assemblies for precision thin-plate and stainless work.",
     features: [
@@ -532,7 +544,7 @@ export const products = [
     category: "torch",
     make: "Delta",
     type: "MIG Welding Torch",
-    image: "/products/torch-mig36kd.jpg",
+    image: imageMap["torch-mig36kd"] || placeholderImage,
     description:
       "An air-cooled MIG welding torch rated for 340A CO₂ / 320A mixed gas at 60% duty cycle, supporting wire diameters from 0.8mm to 1.2mm.",
     features: [
@@ -562,4 +574,4 @@ export function getProductBySlug(slug) {
 
 export function getCategory(slug) {
   return categories.find((c) => c.slug === slug);
-      }
+}
