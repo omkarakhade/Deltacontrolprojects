@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -21,13 +20,10 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/10 shadow-sm">
       <div className="container-page flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <Image
+          <img
             src="/logo.png"
             alt="Delta Control Projects logo"
-            width={44}
-            height={44}
             className="h-9 w-auto"
-            priority
           />
           <span className="flex flex-col leading-none">
             <span className="font-display text-xl tracking-wide text-black uppercase">
