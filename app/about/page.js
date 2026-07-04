@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { company } from "@/data/company";
-import { certificationsImage } from "@/data/certificationsImage";
 
 export const metadata = {
   title: "About | Delta Control Projects",
@@ -12,7 +11,6 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-      {/* Hero */}
       <section className="bg-navy-900 text-white py-20">
         <div className="container-page">
           <span className="font-mono text-xs text-accent-400 uppercase tracking-widest">
@@ -30,7 +28,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story */}
       <section className="py-16 bg-white">
         <div className="container-page grid md:grid-cols-2 gap-14">
           <div>
@@ -69,7 +66,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* People Power */}
       <section className="py-16 bg-steel-50">
         <div className="container-page">
           <h2 className="font-display text-2xl text-navy-900 mb-8 text-center">
@@ -101,7 +97,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications */}
       <section className="py-16 bg-white">
         <div className="container-page text-center">
           <h2 className="font-display text-2xl text-navy-900 mb-2">
@@ -111,11 +106,11 @@ export default function AboutPage() {
 
           <div className="max-w-md mx-auto mb-12">
             <Image
-              src={certificationsImage}
+              src="/certifications.jpg"
               alt="Delta Control Projects certifications"
               width={700}
               height={824}
-              className="w-full h-auto rounded-sm border border-navy-900/10 shadow-sm"
+              className="w-full h-auto rounded-sm border border-black/10 shadow-sm"
             />
           </div>
 
@@ -137,7 +132,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-16 bg-accent-500">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-6 text-white">
           <div>
