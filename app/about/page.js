@@ -106,7 +106,7 @@ export default function AboutPage() {
 
           <div className="max-w-md mx-auto mb-12">
             <Image
-              src="/certifications.jpg"
+              src="/certifications.png"
               alt="Delta Control Projects certifications"
               width={700}
               height={824}
